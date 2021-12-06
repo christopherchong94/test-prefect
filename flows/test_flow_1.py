@@ -1,4 +1,3 @@
-import prefect
 from datetime import timedelta
 from prefect import Flow
 from prefect.schedules import IntervalSchedule
@@ -7,11 +6,8 @@ from prefect.run_configs import DockerRun
 
 import os
 import sys
-
-logger = prefect.context.get("logger")
 HERE_DIR = os.path.dirname(os.path.realpath("__file__"))
-logger.info(HERE_DIR)
-sys.path.append(os.path.join(HERE_DIR, '../src'))
+sys.path.append(os.path.join(HERE_DIR, 'src'))
 # sys.path.append('/app/src')
 from task_flow_1 import task_test_flow
 
