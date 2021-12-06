@@ -5,7 +5,7 @@ from prefect.storage import GitHub
 from prefect.run_configs import DockerRun
 
 import sys
-sys.path.append('//Users/christopher.chong/Documents/src/backend-analytics/python/orchestration/prefect/prefect-client/src')
+sys.path.append('/app/src')
 from task_flow_2 import task_test_flow
 
 
