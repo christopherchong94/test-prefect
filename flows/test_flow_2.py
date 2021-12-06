@@ -4,8 +4,10 @@ from prefect.schedules import IntervalSchedule
 from prefect.storage import GitHub
 from prefect.run_configs import DockerRun
 
+import os
 import sys
-sys.path.append('/app/src')
+HERE_DIR = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(HERE_DIR, '../src'))
 from task_flow_2 import task_test_flow
 
 
